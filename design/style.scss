@@ -1,0 +1,189 @@
+// VARIABLES
+$main-color: #7529ed;
+$main-color-light: #7f54f7;
+$sub-color: #FFBF46;
+$sub-color-light: #ffe346;
+$trim-color: #4AC64E;
+$accent-color: #92B4F4;
+$light-color: #EDE7F8;
+$transparent-dark-color: rgba(0,0,0, 0.8);
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    3% { transform: rotate(10deg); }
+    6% { transform: rotate(-10deg); }
+    9% { transform: rotate(10deg); }
+    12% { transform: rotate(-10deg); }
+    15% { transform: rotate(10deg); }
+    18% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.shake {
+    animation: shake 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+body {
+    background-color: $light-color ;
+}
+
+/* NAV BAR */
+.rnav-full-container {
+    display: flex;
+    // border-bottom: 4px solid $accent-color;
+    
+    .rnav-full-logo {
+        order: 0;
+        width: 64px;
+        height: 64px;
+        background-color: $light-color;
+        outline: solid $main-color 8px;
+        border-radius: 96px;
+    
+        position: absolute;
+        margin-top: 12px;
+        margin-left: 32px;
+    }
+    .rnav-full-company-name {
+        order: 1;
+        font-family: 'Rubik Mono One', sans-serif;
+        font-size: 42px;
+        color: white;
+    
+        box-shadow: inset -7px 0 8px -6px rgba(0,0,0,0.4);
+        background-color: $main-color;
+        padding-left: 112px;
+        padding-right: 20px;
+    }
+
+    .rnav-full-search {
+        order: 2;
+        display: flex;
+        flex-grow: 1;
+        background-color: $main-color-light;
+        // background-color: red;
+        padding-left: 16px;
+        padding-right: 8px;
+
+        .rnav-full-searchbox {
+            display: flex;
+            flex-grow: 1;
+            min-width: 248px;
+            max-width: 400px;
+            margin-top: auto;
+            margin-bottom: auto;
+            border-radius: 28px;
+            background-color: $light-color;
+            // background-color: lime;
+
+            .rnav-full-searchbox-icon {
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: 8px;
+                margin-right: 4px;
+                font-size: 24px;
+                color: $main-color-light;
+            }
+            .rnav-full-searchbox-input {
+                flex-grow: 1;
+                min-width: 10px;
+                border-radius: 0 28px 28px 0;
+                border: none;
+                font-size: 24px;
+                padding-left: 8px;
+                padding-right: 12px;
+            }
+            .rnav-full-searchbox-input:focus {
+                outline: none;
+            }
+        }
+        .rnav-full-searchbox:focus-within {
+            outline: solid $main-color 4px;
+            .rnav-full-searchbox-icon {
+                color: $main-color;
+            }
+        }
+    }
+
+    .rnav-full-user {
+        order: 3;
+        display: flex;
+        background-color: $main-color-light;
+
+        .rnav-full-user-msg {
+            margin-top: auto;
+            margin-bottom: auto;
+
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 300px;
+            font-size: 24px;
+            color: $light-color;
+        }
+        .rnav-full-user-dropdown {
+            margin-top: auto;
+            margin-bottom: auto;
+            color: $light-color;
+        }
+    }
+
+    .rnav-full-notif {
+        order: 4;
+        display: flex;
+        background-color: $main-color-light;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        .rnav-full-notif-icon {
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 36px;
+            color: $sub-color-light;
+            position: relative;
+
+            .notif-pip {
+                height: 12px;
+                width: 12px;
+                background-color: #FF3030;
+                border-radius: 100%;
+    
+                position: absolute;
+                top: 3px;
+                right: 3px;
+            }
+        }
+        
+    }
+
+    .rnav-full-cart {
+        order: 5;
+        display: flex;
+        padding-left: 16px;
+        padding-right: 16px;
+        background-color: $trim-color;
+
+        .rnav-full-cart-icon {
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 36px;
+            color: $light-color;
+        }
+        .rnav-full-cart-text {
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 24px;
+            font-family: 'Rubik', sans-serif;
+            color: white;
+        }
+    }
+    
+}
